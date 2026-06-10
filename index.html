@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pakistan Property Investment Summit Canada 2026 — Developer Registration</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --emerald-deep:#04543a;
+    --emerald:#0b6e4f;
+    --gold:#c9a227;
+    --gold-light:#e8c766;
+    --ink:#102a22;
+  }
+  *{ font-family:'Inter',sans-serif; }
+  .font-display{ font-family:'Playfair Display',serif; }
+  body{ background:#f4f6f5; color:var(--ink); }
+
+  .hero-bg{
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(201,162,39,.25), transparent 60%),
+      radial-gradient(900px 500px at 10% 110%, rgba(11,110,79,.45), transparent 60%),
+      linear-gradient(135deg,#03301f 0%, #07442e 45%, #0b6e4f 100%);
+  }
+  .gold-text{
+    background:linear-gradient(100deg,#e8c766 0%, #c9a227 45%, #f3dd9a 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .gold-line{ background:linear-gradient(90deg, transparent, var(--gold), transparent); height:2px; }
+
+  .card{
+    background:#fff;
+    border:1px solid rgba(16,42,34,.07);
+    border-radius:1.25rem;
+    box-shadow:0 12px 40px -18px rgba(4,84,58,.18), 0 2px 8px rgba(16,42,34,.04);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover{ box-shadow:0 18px 50px -18px rgba(4,84,58,.28), 0 4px 12px rgba(16,42,34,.06); }
+
+  .section-badge{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:2.4rem; height:2.4rem; border-radius:.8rem; flex:none;
+    background:linear-gradient(135deg,var(--emerald),#0e8a63);
+    color:#fff; font-weight:700; font-size:.95rem;
+    box-shadow:0 6px 16px -6px rgba(11,110,79,.55);
+  }
+
+  .field{
+    width:100%; padding:.8rem 1rem; border-radius:.75rem;
+    border:1.5px solid #dde5e1; background:#fbfcfc; font-size:.95rem;
+    transition:border-color .2s, box-shadow .2s, background .2s;
+  }
+  .field:focus{
+    outline:none; border-color:var(--emerald); background:#fff;
+    box-shadow:0 0 0 4px rgba(11,110,79,.12);
+  }
+  .field-label{ display:block; font-size:.8rem; font-weight:600; letter-spacing:.02em; color:#3b554b; margin-bottom:.4rem; }
+  .req::after{ content:" *"; color:#c0392b; }
+
+  /* checkbox / radio pills */
+  .pill input{ position:absolute; opacity:0; pointer-events:none; }
+  .pill span{
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.55rem 1rem; border-radius:999px; cursor:pointer;
+    border:1.5px solid #d8e1dd; background:#fff; font-size:.875rem; font-weight:500;
+    color:#41584f; transition:all .18s ease; user-select:none;
+  }
+  .pill span::before{
+    content:""; width:.65rem; height:.65rem; border-radius:50%;
+    border:2px solid #b9c8c2; transition:all .18s ease; flex:none;
+  }
+  .pill input:checked + span{
+    border-color:var(--emerald); background:linear-gradient(135deg,#eaf6f1,#f5fbf8);
+    color:var(--emerald-deep); box-shadow:0 4px 14px -6px rgba(11,110,79,.4);
+  }
+  .pill input:checked + span::before{ border-color:var(--emerald); background:var(--emerald); }
+  .pill input:focus-visible + span{ box-shadow:0 0 0 4px rgba(11,110,79,.18); }
+
+  /* package cards */
+  .pkg input{ position:absolute; opacity:0; }
+  .pkg .pkg-card{
+    cursor:pointer; border-radius:1rem; padding:1.4rem 1.2rem; height:100%;
+    border:2px solid #e3e9e6; background:#fff; text-align:center;
+    transition:all .22s ease; position:relative; overflow:hidden;
+  }
+  .pkg .pkg-card::before{
+    content:""; position:absolute; inset:0 0 auto 0; height:5px; opacity:.85;
+  }
+  .pkg.platinum .pkg-card::before{ background:linear-gradient(90deg,#9aa7b5,#e3e9f2,#9aa7b5); }
+  .pkg.gold .pkg-card::before{ background:linear-gradient(90deg,#c9a227,#f3dd9a,#c9a227); }
+  .pkg.silver .pkg-card::before{ background:linear-gradient(90deg,#aab4b0,#dfe6e3,#aab4b0); }
+  .pkg input:checked + .pkg-card{
+    border-color:var(--emerald); transform:translateY(-4px);
+    box-shadow:0 16px 34px -14px rgba(11,110,79,.4);
+  }
+  .pkg input:checked + .pkg-card .pkg-check{ opacity:1; transform:scale(1); }
+  .pkg-check{
+    opacity:0; transform:scale(.6); transition:all .22s ease;
+    width:1.6rem; height:1.6rem; border-radius:50%; margin:0 auto;
+    background:var(--emerald); color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:.8rem; font-weight:700;
+  }
+
+  .btn-gold{
+    background:linear-gradient(135deg,#d8b23a,#c9a227 55%,#b08a14);
+    color:#1d1503; font-weight:700; letter-spacing:.03em;
+    box-shadow:0 12px 30px -10px rgba(201,162,39,.65);
+    transition:transform .2s ease, box-shadow .2s ease, filter .2s;
+  }
+  .btn-gold:hover{ transform:translateY(-2px); filter:brightness(1.05); box-shadow:0 18px 38px -10px rgba(201,162,39,.75); }
+  .btn-gold:active{ transform:translateY(0); }
+
+  .countdown-box{
+    background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(8px); border-radius:1rem;
+  }
+
+  details.notice summary{ cursor:pointer; list-style:none; }
+  details.notice summary::-webkit-details-marker{ display:none; }
+  details.notice[open] .chev{ transform:rotate(180deg); }
+  .chev{ transition:transform .25s; }
+
+  @keyframes fadeUp{ from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:translateY(0);} }
+  .reveal{ opacity:0; }
+  .reveal.in{ animation:fadeUp .7s ease forwards; }
+
+  .progress-track{ position:fixed; top:0; left:0; right:0; height:4px; z-index:60; background:transparent; }
+  .progress-bar{ height:100%; width:0%; background:linear-gradient(90deg,var(--emerald),var(--gold)); transition:width .1s linear; }
+
+  .field.invalid{ border-color:#c0392b; box-shadow:0 0 0 4px rgba(192,57,43,.1); }
+  .err-msg{ font-size:.75rem; color:#c0392b; margin-top:.3rem; display:none; }
+  .invalid ~ .err-msg{ display:block; }
+
+  /* modal */
+  .modal-backdrop{ background:rgba(7,38,27,.6); backdrop-filter:blur(6px); }
+  @keyframes pop{ from{transform:scale(.85); opacity:0;} to{transform:scale(1); opacity:1;} }
+  .modal-card{ animation:pop .35s cubic-bezier(.2,.9,.3,1.2); }
+
+  @media print{
+    .no-print{ display:none !important; }
+    .card{ box-shadow:none; border:1px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-track no-print"><div id="progressBar" class="progress-bar"></div></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero-bg text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-10" aria-hidden="true"
+       style="background-image:radial-gradient(rgba(255,255,255,.5) 1px, transparent 1px); background-size:28px 28px;"></div>
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 pt-14 pb-16 sm:pt-20 sm:pb-24 relative">
+    <div class="flex items-center gap-3 mb-8">
+      <div class="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-xl">🏙️</div>
+      <div>
+        <p class="text-xs tracking-[.3em] uppercase text-emerald-100/80 font-semibold">Official Registration</p>
+        <p class="text-sm font-medium text-white/90">Developer Participation Form</p>
+      </div>
+    </div>
+
+    <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-800 font-bold leading-tight">
+      Pakistan Property<br class="hidden sm:block">
+      Investment Summit <span class="gold-text">Canada 2026</span>
+    </h1>
+
+    <div class="flex flex-wrap items-center gap-3 mt-6 text-sm sm:text-base">
+      <span class="px-4 py-1.5 rounded-full bg-white/10 border border-white/20 font-medium">📍 Toronto</span>
+      <span class="px-4 py-1.5 rounded-full bg-white/10 border border-white/20 font-medium">📍 Calgary</span>
+      <span class="px-4 py-1.5 rounded-full bg-white/10 border border-white/20 font-medium">🗓️ First Week of September 2026</span>
+    </div>
+
+    <p class="mt-6 max-w-2xl text-emerald-50/90 text-base sm:text-lg leading-relaxed">
+      Connecting Pakistan's leading developers, builders, housing societies and real estate organizations
+      with the Canadian overseas investor community. <em class="not-italic gold-text font-semibold">Take Your Project Beyond Borders.</em>
+    </p>
+
+    <!-- countdown -->
+    <div class="mt-10">
+      <p class="text-xs tracking-[.25em] uppercase text-emerald-100/70 font-semibold mb-3">Registration closes — 30 June 2026</p>
+      <div id="countdown" class="grid grid-cols-4 gap-2 sm:gap-3 max-w-md">
+        <div class="countdown-box p-3 sm:p-4 text-center">
+          <div id="cd-days" class="text-2xl sm:text-3xl font-bold gold-text">--</div>
+          <div class="text-[.65rem] sm:text-xs uppercase tracking-wider text-white/70 mt-1">Days</div>
+        </div>
+        <div class="countdown-box p-3 sm:p-4 text-center">
+          <div id="cd-hours" class="text-2xl sm:text-3xl font-bold gold-text">--</div>
+          <div class="text-[.65rem] sm:text-xs uppercase tracking-wider text-white/70 mt-1">Hours</div>
+        </div>
+        <div class="countdown-box p-3 sm:p-4 text-center">
+          <div id="cd-mins" class="text-2xl sm:text-3xl font-bold gold-text">--</div>
+          <div class="text-[.65rem] sm:text-xs uppercase tracking-wider text-white/70 mt-1">Minutes</div>
+        </div>
+        <div class="countdown-box p-3 sm:p-4 text-center">
+          <div id="cd-secs" class="text-2xl sm:text-3xl font-bold gold-text">--</div>
+          <div class="text-[.65rem] sm:text-xs uppercase tracking-wider text-white/70 mt-1">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#registration" class="btn-gold no-print inline-block mt-10 px-8 py-3.5 rounded-full text-sm sm:text-base">
+      Begin Registration ↓
+    </a>
+  </div>
+
+  <svg class="block w-full text-[#f4f6f5]" viewBox="0 0 1440 70" fill="currentColor" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C320,90 640,0 960,30 C1180,50 1320,40 1440,20 L1440,70 L0,70 Z"/>
+  </svg>
+</header>
+
+<main class="max-w-5xl mx-auto px-5 sm:px-8 -mt-2 pb-20">
+
+  <!-- ============ IMPORTANT NOTICE ============ -->
+  <section class="card p-6 sm:p-8 mt-8 reveal">
+    <div class="flex items-start gap-4">
+      <div class="text-3xl flex-none">📋</div>
+      <div>
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--emerald-deep)]">Important Notice</h2>
+        <p class="mt-3 text-sm sm:text-base leading-relaxed text-slate-600">
+          Thank you for your interest in participating in <strong>Pakistan Property Investment Summit Canada 2026</strong>.
+          This registration form collects preliminary information from developers, builders, housing societies and real
+          estate organizations interested in participating in the summit, planned for the
+          <strong>first week of September 2026</strong> in <strong>Toronto</strong> and <strong>Calgary, Canada</strong>.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <div class="px-4 py-2 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm font-semibold">
+            ⏳ Registration Closing Date: <span class="font-bold">30 June 2026</span>
+          </div>
+          <div class="px-4 py-2 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-semibold">
+            ✅ Only confirmed participants are considered for final scheduling
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PARTICIPATION PROCESS ============ -->
+  <section class="card p-6 sm:p-8 mt-6 reveal">
+    <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--emerald-deep)] flex items-center gap-3">
+      <span class="text-3xl">🤝</span> Participation Process
+    </h2>
+    <p class="mt-3 text-sm sm:text-base text-slate-600">Following review of the submitted registration form, selected participants may receive:</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-5">
+      <div class="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100"><span class="text-xl">📨</span><span class="text-sm font-medium">Participation Confirmation Letter</span></div>
+      <div class="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100"><span class="text-xl">📝</span><span class="text-sm font-medium">Memorandum of Understanding (MOU)</span></div>
+      <div class="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100"><span class="text-xl">📘</span><span class="text-sm font-medium">Event Participation Guidelines</span></div>
+      <div class="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100"><span class="text-xl">📑</span><span class="text-sm font-medium">Event SOPs</span></div>
+      <div class="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br from-emerald-50 to-white border border-emerald-100"><span class="text-xl">⚙️</span><span class="text-sm font-medium">Operational Information</span></div>
+      <div class="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-br from-amber-50 to-white border border-amber-100"><span class="text-xl">🔏</span><span class="text-sm font-medium">Final Confirmation via Official MOU</span></div>
+    </div>
+    <p class="mt-5 text-xs sm:text-sm text-slate-500 italic">
+      Participation will be considered confirmed only after completion of the required documentation process and execution of the official MOU.
+    </p>
+  </section>
+
+  <!-- ============ FORM ============ -->
+  <form id="registrationForm" class="mt-10" novalidate>
+    <div id="registration" class="text-center mb-8 reveal">
+      <div class="gold-line w-32 mx-auto mb-5"></div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-[var(--emerald-deep)]">Developer Participation Registration Form</h2>
+      <p class="text-slate-500 text-sm mt-2">Fields marked with <span class="text-red-600">*</span> are required.</p>
+    </div>
+
+    <!-- 1. COMPANY INFO -->
+    <section class="card p-6 sm:p-8 mt-6 reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="section-badge">1</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Company Information</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="sm:col-span-2">
+          <label class="field-label req" for="companyName">Company Name</label>
+          <input class="field" id="companyName" name="companyName" type="text" placeholder="e.g. ABC Developers (Pvt.) Ltd." required>
+          <p class="err-msg">Company name is required.</p>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label req" for="projectNames">Project Name(s)</label>
+          <input class="field" id="projectNames" name="projectNames" type="text" placeholder="e.g. Skyline Residency, Green Valley Phase II" required>
+          <p class="err-msg">Please list at least one project.</p>
+        </div>
+        <div>
+          <label class="field-label" for="website">Company Website</label>
+          <input class="field" id="website" name="website" type="url" placeholder="https://www.example.com">
+        </div>
+        <div>
+          <label class="field-label req" for="country">Country</label>
+          <input class="field" id="country" name="country" type="text" placeholder="e.g. Pakistan" required>
+          <p class="err-msg">Country is required.</p>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label req" for="address">Company Address</label>
+          <textarea class="field" id="address" name="address" rows="2" placeholder="Full registered company address" required></textarea>
+          <p class="err-msg">Company address is required.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PRIMARY CONTACT -->
+    <section class="card p-6 sm:p-8 mt-6 reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="section-badge">2</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Primary Contact Person</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="field-label req" for="contactName">Full Name</label>
+          <input class="field" id="contactName" name="contactName" type="text" placeholder="Full name" required>
+          <p class="err-msg">Contact name is required.</p>
+        </div>
+        <div>
+          <label class="field-label req" for="designation">Designation</label>
+          <input class="field" id="designation" name="designation" type="text" placeholder="e.g. Director Marketing" required>
+          <p class="err-msg">Designation is required.</p>
+        </div>
+        <div>
+          <label class="field-label req" for="mobile">Mobile / WhatsApp</label>
+          <input class="field" id="mobile" name="mobile" type="tel" placeholder="+92 3XX XXXXXXX" required>
+          <p class="err-msg">Mobile / WhatsApp number is required.</p>
+        </div>
+        <div>
+          <label class="field-label req" for="email">Email Address</label>
+          <input class="field" id="email" name="email" type="email" placeholder="name@company.com" required>
+          <p class="err-msg">A valid email address is required.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROJECT INFO -->
+    <section class="card p-6 sm:p-8 mt-6 reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="section-badge">3</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Project Information</h3>
+      </div>
+      <div class="grid gap-5">
+        <div>
+          <label class="field-label req" for="projectLocation">Project Location</label>
+          <input class="field" id="projectLocation" name="projectLocation" type="text" placeholder="City / Area, Pakistan" required>
+          <p class="err-msg">Project location is required.</p>
+        </div>
+        <div>
+          <span class="field-label req">Project Type</span>
+          <div class="flex flex-wrap gap-2.5" id="projectTypeGroup">
+            <label class="pill relative"><input type="radio" name="projectType" value="Housing Society" required><span>Housing Society</span></label>
+            <label class="pill relative"><input type="radio" name="projectType" value="Residential Project"><span>Residential Project</span></label>
+            <label class="pill relative"><input type="radio" name="projectType" value="Commercial Project"><span>Commercial Project</span></label>
+            <label class="pill relative"><input type="radio" name="projectType" value="Mixed-Use Development"><span>Mixed-Use Development</span></label>
+            <label class="pill relative"><input type="radio" name="projectType" value="Real Estate Marketing Company"><span>Real Estate Marketing Company</span></label>
+            <label class="pill relative"><input type="radio" name="projectType" value="Other"><span>Other</span></label>
+          </div>
+          <p class="err-msg" id="projectTypeErr">Please select a project type.</p>
+        </div>
+        <div>
+          <label class="field-label req" for="projectDescription">Project Description</label>
+          <textarea class="field" id="projectDescription" name="projectDescription" rows="4" placeholder="Brief description of the project(s), key features, status and target market…" required></textarea>
+          <p class="err-msg">Project description is required.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PACKAGE -->
+    <section class="card p-6 sm:p-8 mt-6 reveal">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="section-badge">4</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Participation Package Selection</h3>
+      </div>
+      <p class="text-sm text-slate-500 mb-6 ml-12">Please select your preferred package. <span class="text-red-600">*</span></p>
+      <div class="grid sm:grid-cols-3 gap-4" id="packageGroup">
+        <label class="pkg platinum relative">
+          <input type="radio" name="package" value="Platinum Partner" required>
+          <div class="pkg-card">
+            <div class="text-3xl mb-2">💎</div>
+            <div class="font-display font-bold text-lg">Platinum Partner</div>
+            <p class="text-xs text-slate-500 mt-2 mb-4">Premier positioning, maximum visibility &amp; priority presentation slots.</p>
+            <div class="pkg-check">✓</div>
+          </div>
+        </label>
+        <label class="pkg gold relative">
+          <input type="radio" name="package" value="Gold Partner">
+          <div class="pkg-card">
+            <div class="text-3xl mb-2">🥇</div>
+            <div class="font-display font-bold text-lg">Gold Partner</div>
+            <p class="text-xs text-slate-500 mt-2 mb-4">Enhanced branding, presentation opportunity &amp; marketing exposure.</p>
+            <div class="pkg-check">✓</div>
+          </div>
+        </label>
+        <label class="pkg silver relative">
+          <input type="radio" name="package" value="Silver Partner">
+          <div class="pkg-card">
+            <div class="text-3xl mb-2">🥈</div>
+            <div class="font-display font-bold text-lg">Silver Partner</div>
+            <p class="text-xs text-slate-500 mt-2 mb-4">Standard participation with exhibition presence &amp; networking.</p>
+            <div class="pkg-check">✓</div>
+          </div>
+        </label>
+      </div>
+      <p class="err-msg" id="packageErr">Please select a participation package.</p>
+    </section>
+
+    <!-- 5. DELEGATION -->
+    <section class="card p-6 sm:p-8 mt-6 reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="section-badge">5</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Delegation Information</h3>
+      </div>
+      <div class="grid gap-5">
+        <div>
+          <span class="field-label req">Number of Representatives Expected to Attend</span>
+          <div class="flex flex-wrap gap-2.5" id="repsGroup">
+            <label class="pill relative"><input type="radio" name="representatives" value="1" required><span>1</span></label>
+            <label class="pill relative"><input type="radio" name="representatives" value="2"><span>2</span></label>
+            <label class="pill relative"><input type="radio" name="representatives" value="3"><span>3</span></label>
+            <label class="pill relative"><input type="radio" name="representatives" value="4+"><span>4+</span></label>
+          </div>
+          <p class="err-msg" id="repsErr">Please select the number of representatives.</p>
+        </div>
+        <div>
+          <label class="field-label" for="repNames">Names of Representatives <span class="font-normal text-slate-400">(if available)</span></label>
+          <textarea class="field" id="repNames" name="repNames" rows="3" placeholder="One name per line…"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. MARKETING MATERIALS -->
+    <section class="card p-6 sm:p-8 mt-6 reveal">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="section-badge">6</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Marketing Materials Available</h3>
+      </div>
+      <p class="text-sm text-slate-500 mb-5 ml-12">Please indicate all available marketing materials.</p>
+      <div class="flex flex-wrap gap-2.5">
+        <label class="pill relative"><input type="checkbox" name="materials" value="Company Profile"><span>Company Profile</span></label>
+        <label class="pill relative"><input type="checkbox" name="materials" value="Project Brochure"><span>Project Brochure</span></label>
+        <label class="pill relative"><input type="checkbox" name="materials" value="Project Presentation"><span>Project Presentation</span></label>
+        <label class="pill relative"><input type="checkbox" name="materials" value="Project Images"><span>Project Images</span></label>
+        <label class="pill relative"><input type="checkbox" name="materials" value="Project Videos"><span>Project Videos</span></label>
+        <label class="pill relative"><input type="checkbox" name="materials" value="Company Logo"><span>Company Logo</span></label>
+        <label class="pill relative"><input type="checkbox" name="materials" value="Social Media Links"><span>Social Media Links</span></label>
+        <label class="pill relative"><input type="checkbox" name="materials" value="Other"><span>Other</span></label>
+      </div>
+    </section>
+
+    <!-- 7. ADDITIONAL COMMENTS -->
+    <section class="card p-6 sm:p-8 mt-6 reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="section-badge">7</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Additional Comments</h3>
+      </div>
+      <label class="field-label" for="comments">Any special requirements, requests or comments</label>
+      <textarea class="field" id="comments" name="comments" rows="4" placeholder="Share anything that helps us plan your participation…"></textarea>
+    </section>
+
+    <!-- 8. DECLARATION -->
+    <section class="card p-6 sm:p-8 mt-6 reveal border-l-4" style="border-left-color:var(--gold);">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="section-badge">8</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Declaration</h3>
+      </div>
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+        We hereby express our interest in participating in <strong>Pakistan Property Investment Summit Canada 2026</strong>
+        and confirm that the information provided in this registration form is accurate to the best of our knowledge.
+      </p>
+      <details class="notice mt-4 rounded-xl bg-slate-50 border border-slate-200">
+        <summary class="flex items-center justify-between px-4 py-3 text-sm font-semibold text-slate-700">
+          We understand and acknowledge that…
+          <span class="chev text-slate-400">▾</span>
+        </summary>
+        <ul class="px-6 pb-4 text-sm text-slate-600 space-y-2 list-disc">
+          <li>This document serves as an <strong>Expression of Interest and Registration Request</strong>.</li>
+          <li>Submission of this form does not constitute final participation approval.</li>
+          <li>Registration forms should be submitted on or before <strong>30 June 2026</strong>.</li>
+          <li>Event dates may be adjusted by the Organizer if required due to operational, travel, visa processing, venue availability or other unforeseen circumstances.</li>
+          <li>Selected participants may be invited to proceed with the Participation Confirmation and MOU process.</li>
+          <li>Detailed participation requirements, operational guidelines and event information may be shared separately.</li>
+          <li>Participation shall be finalized only after completion of the required documentation process and execution of the official MOU.</li>
+        </ul>
+      </details>
+      <label class="flex items-start gap-3 mt-5 cursor-pointer select-none">
+        <input type="checkbox" id="declAgree" name="declAgree" required
+               class="mt-1 w-5 h-5 rounded border-slate-300 text-emerald-700 accent-[#0b6e4f]">
+        <span class="text-sm font-medium text-slate-700">
+          I confirm that I am authorized to submit this registration on behalf of my organization and I accept the terms above. <span class="text-red-600">*</span>
+        </span>
+      </label>
+      <p class="err-msg" id="declErr">You must accept the declaration to proceed.</p>
+    </section>
+
+    <!-- 9. AUTHORIZED REPRESENTATIVE -->
+    <section class="card p-6 sm:p-8 mt-6 reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="section-badge">9</span>
+        <h3 class="font-display text-lg sm:text-xl font-bold">Authorized Representative</h3>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label class="field-label req" for="authName">Name</label>
+          <input class="field" id="authName" name="authName" type="text" placeholder="Authorized signatory name" required>
+          <p class="err-msg">Authorized representative name is required.</p>
+        </div>
+        <div>
+          <label class="field-label req" for="authDesignation">Designation</label>
+          <input class="field" id="authDesignation" name="authDesignation" type="text" placeholder="e.g. CEO / Director" required>
+          <p class="err-msg">Designation is required.</p>
+        </div>
+        <div>
+          <label class="field-label req" for="signature">Signature <span class="font-normal text-slate-400">(type full name)</span></label>
+          <input class="field font-display italic" id="signature" name="signature" type="text" placeholder="Type full name as digital signature" required style="font-size:1.05rem;">
+          <p class="err-msg">Digital signature is required.</p>
+        </div>
+        <div>
+          <label class="field-label req" for="signDate">Date</label>
+          <input class="field" id="signDate" name="signDate" type="date" required>
+          <p class="err-msg">Date is required.</p>
+        </div>
+        <div class="sm:col-span-2">
+          <label class="field-label" for="stamp">Company Stamp <span class="font-normal text-slate-400">(reference / note — physical stamp on MOU)</span></label>
+          <input class="field" id="stamp" name="stamp" type="text" placeholder="e.g. Official stamp will be affixed on printed MOU">
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBMIT -->
+    <div class="mt-10 text-center reveal no-print">
+      <button type="submit" class="btn-gold px-12 py-4 rounded-full text-base sm:text-lg w-full sm:w-auto">
+        Submit Registration Form
+      </button>
+      <p class="text-xs text-slate-500 mt-4">Your submission will be reviewed by the organizing committee. Selected participants will be contacted directly.</p>
+    </div>
+  </form>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="hero-bg text-white mt-4">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8 py-12 text-center">
+    <h2 class="font-display text-xl sm:text-2xl font-bold">Pakistan Property Investment Summit <span class="gold-text">Canada 2026</span></h2>
+    <p class="mt-2 text-emerald-100/80 text-sm tracking-widest uppercase">Toronto &nbsp;•&nbsp; Calgary &nbsp;•&nbsp; Canada</p>
+    <div class="gold-line w-40 mx-auto my-6"></div>
+    <p class="font-display italic text-lg gold-text">"Take Your Project Beyond Borders"</p>
+    <p class="mt-6 text-xs text-white/50">© 2026 Pakistan Property Investment Summit Canada. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ SUCCESS MODAL ============ -->
+<div id="successModal" class="fixed inset-0 z-50 hidden items-center justify-center p-5 modal-backdrop">
+  <div class="modal-card bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl">
+    <div class="w-16 h-16 mx-auto rounded-full bg-emerald-100 flex items-center justify-center text-3xl">✅</div>
+    <h3 class="font-display text-2xl font-bold mt-5 text-[var(--emerald-deep)]">Registration Submitted!</h3>
+    <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+      Thank you, <strong id="modalName">Partner</strong>. Your Expression of Interest for
+      <strong>Pakistan Property Investment Summit Canada 2026</strong> has been received.
+      Our team will review your submission and selected participants will be contacted with the
+      Participation Confirmation Letter and MOU process.
+    </p>
+    <div class="mt-4 px-4 py-2.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold">
+      Reference ID: <span id="refId" class="font-mono"></span>
+    </div>
+    <button id="closeModal" class="btn-gold mt-6 px-8 py-3 rounded-full text-sm w-full">Close</button>
+  </div>
+</div>
+
+<script>
+  // ---------- Countdown to 30 June 2026 ----------
+  const deadline = new Date('2026-06-30T23:59:59');
+  function tick(){
+    const diff = deadline - new Date();
+    const set = (id,v)=>document.getElementById(id).textContent = String(v).padStart(2,'0');
+    if(diff <= 0){ ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>document.getElementById(id).textContent='00'); return; }
+    set('cd-days', Math.floor(diff/864e5));
+    set('cd-hours', Math.floor(diff/36e5)%24);
+    set('cd-mins', Math.floor(diff/6e4)%60);
+    set('cd-secs', Math.floor(diff/1e3)%60);
+  }
+  tick(); setInterval(tick,1000);
+
+  // ---------- Scroll reveal ----------
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // ---------- Scroll progress bar ----------
+  const bar = document.getElementById('progressBar');
+  addEventListener('scroll',()=>{
+    const h = document.documentElement;
+    bar.style.width = (h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  },{passive:true});
+
+  // ---------- Default date ----------
+  document.getElementById('signDate').valueAsDate = new Date();
+
+  // ---------- Validation & submit ----------
+  const form = document.getElementById('registrationForm');
+
+  function showGroupError(name, errId){
+    const ok = !!form.querySelector(`input[name="${name}"]:checked`);
+    document.getElementById(errId).style.display = ok ? 'none' : 'block';
+    return ok;
+  }
+
+  form.querySelectorAll('.field[required]').forEach(f=>{
+    f.addEventListener('input',()=> f.classList.toggle('invalid', !f.checkValidity()));
+    f.addEventListener('blur',()=> f.classList.toggle('invalid', !f.checkValidity()));
+  });
+
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    let valid = true, firstBad = null;
+
+    form.querySelectorAll('.field[required]').forEach(f=>{
+      const ok = f.checkValidity();
+      f.classList.toggle('invalid', !ok);
+      if(!ok){ valid=false; firstBad = firstBad || f; }
+    });
+
+    if(!showGroupError('projectType','projectTypeErr')){ valid=false; firstBad = firstBad || document.getElementById('projectTypeGroup'); }
+    if(!showGroupError('package','packageErr')){ valid=false; firstBad = firstBad || document.getElementById('packageGroup'); }
+    if(!showGroupError('representatives','repsErr')){ valid=false; firstBad = firstBad || document.getElementById('repsGroup'); }
+
+    const decl = document.getElementById('declAgree');
+    document.getElementById('declErr').style.display = decl.checked ? 'none' : 'block';
+    if(!decl.checked){ valid=false; firstBad = firstBad || decl; }
+
+    if(!valid){
+      firstBad.scrollIntoView({behavior:'smooth', block:'center'});
+      if(firstBad.focus) firstBad.focus({preventScroll:true});
+      return;
+    }
+
+    // success
+    document.getElementById('modalName').textContent =
+      document.getElementById('contactName').value.trim() || 'Partner';
+    document.getElementById('refId').textContent =
+      'PPIS-CA26-' + Math.random().toString(36).slice(2,8).toUpperCase();
+    const modal = document.getElementById('successModal');
+    modal.classList.remove('hidden'); modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  });
+
+  // clear group errors on choose
+  ['projectType','package','representatives'].forEach((name,i)=>{
+    const errId = ['projectTypeErr','packageErr','repsErr'][i];
+    form.querySelectorAll(`input[name="${name}"]`).forEach(r=>
+      r.addEventListener('change',()=>document.getElementById(errId).style.display='none'));
+  });
+  document.getElementById('declAgree').addEventListener('change', e=>{
+    if(e.target.checked) document.getElementById('declErr').style.display='none';
+  });
+
+  document.getElementById('closeModal').addEventListener('click', ()=>{
+    const modal = document.getElementById('successModal');
+    modal.classList.add('hidden'); modal.classList.remove('flex');
+    document.body.style.overflow = '';
+    form.reset();
+    document.getElementById('signDate').valueAsDate = new Date();
+    scrollTo({top:0, behavior:'smooth'});
+  });
+</script>
+</body>
+</html>
